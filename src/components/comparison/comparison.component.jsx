@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
-import Product from '../product/product.component.jsx';
-import Fetch from 'react-fetch';
+import Products from '../products/products.component.jsx';
 
-function Comparison() {
+function Comparison(data) {
+
+    useEffect(() => {
+        console.log('products updated');
+    }, [data])
+
     return (
-        <Fetch url="https://5f993a3050d84900163b845a.mockapi.io/eriks/products/all">
-            <Product />
-        </Fetch>
+        <Products products={data} />
     )
 }
 
