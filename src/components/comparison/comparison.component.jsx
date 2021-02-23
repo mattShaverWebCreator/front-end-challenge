@@ -1,15 +1,15 @@
-import React, {useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import Products from '../products/products.component.jsx';
 
-function Comparison(data) {
+function Comparison(props) {
 
     useEffect(() => {
         console.log('products updated');
-    }, [data])
+    }, [props.products])
 
     return (
-        <Products products={data} />
+        <Products products={useState(props.products)} />
     )
 }
 

@@ -9,10 +9,10 @@ function App(props) {
 
     useEffect(() => {
         console.log('products updated');
-    }, [data.products])
+    }, [props.products])
 
     return (
-        <Fetch props={props} url="https://5f993a3050d84900163b845a.mockapi.io/eriks/products/all" onSuccess={() => setData(props)}>
+        <Fetch url="https://5f993a3050d84900163b845a.mockapi.io/eriks/products/all" onSuccess={() => setData(props.products)}>
            <Comparison products={useState(data)}>
            </Comparison>
         </Fetch>

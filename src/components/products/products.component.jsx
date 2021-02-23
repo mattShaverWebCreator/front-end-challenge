@@ -4,17 +4,18 @@ function Products(data)  {
 
     useEffect(() => {
         console.log('products updated');
-    }, useState(data.products))
+    }, [data])
 
     return (
-        (useState([data.products]).map((product, key) => 
+        (data.products[0]).map((product, key) => 
             <li key={key}>
                 <div className="product-list-item">
                     <header>{product.Toepassing}</header>
                 </div>
             </li>
         ))
-    )
+
+        
 }
 
 export default Products
