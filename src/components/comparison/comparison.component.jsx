@@ -14,5 +14,3 @@ function Comparison(props) {
 }
 
 export default Comparison 
-
-

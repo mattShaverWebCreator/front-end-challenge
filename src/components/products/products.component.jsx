@@ -14,8 +14,6 @@ function Products(data)  {
                 </div>
             </li>
         ))
-
-        
 }
 
 export default Products
