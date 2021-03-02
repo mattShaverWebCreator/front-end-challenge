@@ -1,0 +1,26 @@
+body {
+    font-family: "Arial"
+}
+
+
+form { 
+    display: grid;
+    grid-template-columns: auto;
+    label {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+    }
+    div[role="group"]{
+        display: grid;
+        grid-auto-rows: 3rem; 
+        border-right: 1px solid #8080727d;
+    }
+    span {
+        font-size: 0.9rem; 
+        font-weight: 700;
+        color: #000;
+        padding-left: 0.5rem;
+        max-width: 19rem;
+    }
+}

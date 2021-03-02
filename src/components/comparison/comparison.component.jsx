@@ -3,13 +3,14 @@ import React, {useState} from 'react';
 import useFetch from "../../hooks/useFetch";
 import Products from '../products/products.component.jsx';
 import { Formik, Field, Form } from 'formik';
+import './comparison.styles.scss';
 
 import { 
     ComparisonSelection,
+    ComparisonSelectionTitle,
     ComparisonSelectionDescriberTitle,
     ComparisonQuantity,
     ComparisonQuantityTitle,
-    span, 
     ComparisonSelectionDescribers, 
     ComparisonSelectionDescriber, 
     ComparisonProducts, 
@@ -52,7 +53,7 @@ function Comparison() {
             >
                  {({ values }) => (
                         <Form>
-                            <h3>Je selectie</h3> 
+                            <ComparisonSelectionTitle>Je selectie</ComparisonSelectionTitle> 
                             {/* Should refactor rest of this element 
                             to dynamically generate inputs and toggle product display */}
                             <div role="group" aria-labelledby="checkbox-group">
@@ -76,59 +77,25 @@ function Comparison() {
                         </Form>
                     )}
                 </Formik>
-                <ComparisonSelectionDescribers>
                     <ComparisonSelectionDescriber>
                         <ComparisonSelectionDescriberTitle>Keurmerk</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriber>
                         <ComparisonSelectionDescriberTitle>Materiaal</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriber>
                         <ComparisonSelectionDescriberTitle>Inwendige diameter(mm)</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriber>
                         <ComparisonSelectionDescriberTitle>Snoerdikte(mm)</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriberTitle>Internationale maataanduiding</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriber>
+                        <ComparisonSelectionDescriberTitle>Internationale maataanduiding</ComparisonSelectionDescriberTitle>
                         <ComparisonSelectionDescriberTitle>Kleur</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriber>
                         <ComparisonSelectionDescriberTitle>Compound</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriber>
                         <ComparisonSelectionDescriberTitle>Toepassing</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriberTitle>HandelsnaamM</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriberTitle>Seal volgens norm</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriber>
+                        <ComparisonSelectionDescriberTitle>HandelsnaamM</ComparisonSelectionDescriberTitle>
+                        <ComparisonSelectionDescriberTitle>Seal volgens norm</ComparisonSelectionDescriberTitle>
                         <ComparisonSelectionDescriberTitle>Temperatuuregebied(C)</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriber>
                         <ComparisonSelectionDescriberTitle>Keurmerk</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber>
-                    <ComparisonSelectionDescriber>
                         <ComparisonSelectionDescriberTitle>Materiaal</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber>
-                   <ComparisonSelectionDescriber>
                         <ComparisonSelectionDescriberTitle>Hardheld</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber> 
-                    <ComparisonSelectionDescriber> 
                         <ComparisonSelectionDescriberTitle>Inwendisge diameter(mm)</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber>
-                   <ComparisonSelectionDescriber>
                         <ComparisonSelectionDescriberTitle>Snoerdikte(mm)</ComparisonSelectionDescriberTitle>
-                    </ComparisonSelectionDescriber> 
-                    <ComparisonSelectionDescriber>
                         <ComparisonSelectionDescriberTitle> Internationale maataanduiding</ComparisonSelectionDescriberTitle>
                     </ComparisonSelectionDescriber>
-                </ComparisonSelectionDescribers>
             </ComparisonSelection>
             <ComparisonProducts>
                 <Products />
