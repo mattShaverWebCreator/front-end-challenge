@@ -12,6 +12,12 @@ export const productStyles = css `
     }
 `
 
+export const Product = styled.div`
+    text-align: center;
+    padding: 4rem 1rem 1rem 0; 
+}
+`;
+
 export const ProductContainer = styled.div`
   min-width: 165px;
   width: auto;

@@ -10,7 +10,7 @@ import {
     ComparisonSelectionTitle,
     ComparisonSelectionDescriberTitle,
     ComparisonQuantity,
-    ComparisonQuantityTitle,
+    ComparisonTitle,
     ComparisonSelectionDescribers, 
     ComparisonSelectionDescriber, 
     ComparisonProducts, 
@@ -36,47 +36,45 @@ function Comparison() {
 
     return (
         <ComparisonContainer>
-            <ComparisonQuantity>
-                <ComparisonQuantityTitle>{products.length} producten vergelijken</ComparisonQuantityTitle>
-            </ComparisonQuantity>
+           
             <ComparisonSelection>
-                
-            <Formik
-                initialValues={{
-                toggle: false,
-                checked: [],
-                }}
-                onSubmit={async (values) => {
-                    await sleep(500);
-                    alert(JSON.stringify(values, null, 2));
-                }}
-            >
-                 {({ values }) => (
-                        <Form>
-                            <ComparisonSelectionTitle>Je selectie</ComparisonSelectionTitle> 
-                            {/* Should refactor rest of this element 
-                            to dynamically generate inputs and toggle product display */}
-                            <div role="group" aria-labelledby="checkbox-group">
-                                <label>
-                                    <Field type="checkbox" name="checked" value="One" />
-                                    <span>GATES Eindige tandriem Poly Chain GT carbon 5MGT breedte 15mm lengte 37m</span>
-                                </label>
-                                <label>
-                                    <Field type="checkbox" name="checked" value="Two" />
-                                    <span>METABO Boormachine BE 751 + snelspanboorkop</span>
-                                </label>
-                                <label>
-                                    <Field type="checkbox" name="checked" value="Three" />
-                                    <span>Oliekeering model 64</span>
-                                </label>
-                                <label>
-                                    <Field type="checkbox" name="checked" value="Four" />
-                                    <span>Gates Endinge Poly Chain GT Carbon profiel 5MGT breedte 15mm lengte 37m</span>
-                                </label>
-                            </div>
-                        </Form>
-                    )}
-                </Formik>
+            <   ComparisonTitle>{products.length} producten vergelijken</ComparisonTitle>
+                <Formik
+                    initialValues={{
+                    toggle: false,
+                    checked: [],
+                    }}
+                    onSubmit={async (values) => {
+                        await sleep(500);
+                        alert(JSON.stringify(values, null, 2));
+                    }}
+                >
+                    {({ values }) => (
+                            <Form>
+                                <ComparisonSelectionTitle>Je selectie</ComparisonSelectionTitle> 
+                                {/* Should refactor rest of this element 
+                                to dynamically generate inputs and toggle product display */}
+                                <div role="group" aria-labelledby="checkbox-group">
+                                    <label>
+                                        <Field type="checkbox" name="checked" value="One" />
+                                        <span>GATES Eindige tandriem Poly Chain GT carbon 5MGT breedte 15mm lengte 37m</span>
+                                    </label>
+                                    <label>
+                                        <Field type="checkbox" name="checked" value="Two" />
+                                        <span>METABO Boormachine BE 751 + snelspanboorkop</span>
+                                    </label>
+                                    <label>
+                                        <Field type="checkbox" name="checked" value="Three" />
+                                        <span>Oliekeering model 64</span>
+                                    </label>
+                                    <label>
+                                        <Field type="checkbox" name="checked" value="Four" />
+                                        <span>Gates Endinge Poly Chain GT Carbon profiel 5MGT breedte 15mm lengte 37m</span>
+                                    </label>
+                                </div>
+                            </Form>
+                        )}
+                    </Formik>
                     <ComparisonSelectionDescriber>
                         <ComparisonSelectionDescriberTitle>Keurmerk</ComparisonSelectionDescriberTitle>
                         <ComparisonSelectionDescriberTitle>Materiaal</ComparisonSelectionDescriberTitle>

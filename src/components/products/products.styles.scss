@@ -1,0 +1,45 @@
+.product div {
+    font-weight: 700;
+}
+
+.product .product__properties {
+    display: grid;
+    align-content: center;
+    text-align: left;
+    padding-top: 3.7rem; 
+    grid-auto-rows: 0.9rem;
+    grid-row-gap: 1.5rem;
+}
+
+.product:nth-child(2) {
+    margin-top: 5.3rem; 
+}
+
+.product .product__properties .product__property {
+    border-top: 1px solid #cecece;
+    border-bottom: 1px solid #cecece; 
+}
+
+.product .product__price { 
+    display: grid;
+    grid-auto-flow: row;
+    text-align: left;
+}
+
+.product h3 {
+    color: #2549b9;
+}
+
+.product .grey { 
+    color: #cecece;
+    font-size: 0.7rem;
+}
+
+
+@media(min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media(max-width: 767px) { 
+
+}

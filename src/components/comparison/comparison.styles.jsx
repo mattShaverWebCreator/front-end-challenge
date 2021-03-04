@@ -15,13 +15,14 @@ export const ComparisonSelectionTitle = styled.h3`
 `;
 
 export const ComparisonSelectionDescriberTitle = styled.li`
-font-weight: 700;
-margin-top: 0;
-margin-bottom: 0;
-border-bottom: 1px solid #8080727d;
-list-style: none; 
-padding-top: 1rem;
-padding-bottom: 0.3rem;`; 
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #8080727d;
+    list-style: none; 
+    padding-top: 1rem;
+    padding-bottom: 0.3rem;
+`; 
 
 export const ComparisonSelectionItem = styled.span`
 `;
@@ -36,26 +37,42 @@ export const ComparisonSelectionDescriber = styled.ul`
     border-bottom: 1px solid #8080727d;
     border-right: 1px solid #8080727d;
     padding-left: 0;
-    padding-top: 2rem;
     margin-top: 0;
 `;
 
-export const ComparisonProducts = styled.section``;
+export const ComparisonProducts = styled.section`
+    display: inline-grid;
+    grid-auto-flow: column; 
+    margin-top: 7.3rem;
+    border-top: 1px solid #c1c1ba;
+    @media(min-width: 768px) and (max-width: 991px) {
+        margin-top: 0;
+    }
+    @media(max-width:767px) {
+        grid-auto-flow: row;
+    }
+`;
 
 export const ComparisonQuantity = styled.section`
 `
 
-export const ComparisonQuantityTitle = styled.h3`
+export const ComparisonTitle = styled.h3`
     color: #034ac1;
     font-weight: 700;
     font-size: 1.9rem;
 `;
 
 export const ComparisonSelection = styled.section`
+    display: inline-grid; 
+    @media(min-width: 768px) and (max-width: 991px) {
+        display: none;
+    }
 `;
 
 export const ComparisonContainer = styled.main`
     display: grid;
-    padding: 0 1.5em 0 1.5em;
-    grid-auto-columns: 25%
+    grid-auto-flow: column; 
+    border-bottom: 0.5rem solid #034ac1;
+    padding-bottom: 0 0 0 0.9rem;
 `;
+
